@@ -74,7 +74,7 @@ public abstract class AbstractRegistry implements Registry {
     private final boolean syncSaveFile;
     private final AtomicLong lastCacheChanged = new AtomicLong();
     private final AtomicInteger savePropertiesRetryTimes = new AtomicInteger();
-    private final Set<URL> registered = Collections.synchronizedSet(Collections.newSetFromMap(new WeakHashMap<>()));;
+    private final Set<URL> registered = Collections.synchronizedSet(Collections.newSetFromMap(new WeakHashMap<>()));
     private final ConcurrentMap<URL, Set<NotifyListener>> subscribed = new ConcurrentHashMap<>();
     private final ConcurrentMap<URL, Map<String, List<URL>>> notified = new ConcurrentHashMap<>();
     private URL registryUrl;
